@@ -1,0 +1,11 @@
+[Unit]
+Description=sft spam bridge receiver
+After=network.target
+
+[Service]
+User=sftspambridge
+Group=sftspambridge
+ExecStart=/usr/bin/python3 -u /path/to/sftspambridge.py receive
+
+[Install]
+WantedBy=multi-user.target
